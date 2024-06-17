@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary1: #03045e;
+    --primary2: #023e8a;
+    --primary3: #0077b6;
+    --primary4: #0096c7;
+    --primary5: #00b4d8;
+    --primary6: #48cae4;
+    --primary7: #90e0ef;
+    --primary8: #ade8f4;
+    --primary9: #caf0f8;
+    --black1: #000000;
+    --black2: #1d1d1d;
+    --black3: #303030;
+    --black4: #505050;
+    --black5: #6d6d6d;
+    --white1: #FFFFFF;
+    --white2: #e2e2e2;
+    --white3: #c5c5c5;
+    --white4: #aaaaaa;
+    --white5: #919191;
+}
+
+body {
+    background-color: var(--black1);
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+
+header {
+    background-color: var(--black2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 4.5em;
+    padding-top: -1em;
+    color: var(--black5);
+}
+
+header h1 {
+    position: absolute;
+    left: 0.5em;
+    color: var(--primary3);
+    pointer-events: none;
+}
+
+.navHeader {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 1em;
+}
+
+.navHeader ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 1em;
+}
+
+.navHeader ul li {
+    list-style: none;
+    margin: 1em;
+    cursor: pointer;
+}
+
+.navHeader ul li {
+  color: var(--black5);
+  font-family: inherit;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 800ms;
+  transition-property: color;
+}
+
+.navHeader ul li:focus,
+.navHeader ul li:hover {
+  color: var(--white4);
+}
+
+.navHeader ul li:focus:after,
+.navHeader ul li:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.navHeader ul li:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--white5);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 250ms;
+  transition-property: width, left;
+}
+
+.searchGroup {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 0 1em 0;
+    max-width: 190px;
+    position: relative;
+  }
+
+  .searchGroup input:hover {
+    border-color: var(--white5);
+  }
+  
+  .searchGroup input {
+    font-size: 100%;
+    padding: 0.6em;
+    outline: none;
+    border: 1px solid var(--black5);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+    color: var(--white5);
+    cursor: pointer;
+    transition-duration: 250ms;
+  }
+  
+  .searchGroup label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.5em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: var(--black5);
+  }
+  
+  .searchGroup :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0 0.25em 0 0.25em;
+    background-color: var(--black2);
+    color: var(--white5);
+  }
+  
+  .searchGroup :is(input:focus, input:valid) {
+    border-color: var(--white5);
+    cursor: text;
+  }
+  
+  .accountProfile .fa-user {
+    font-size: 1.15em;
+    color: var(--black5);
+  }
+
+  .accountProfile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: center;
+    margin-left: 1em;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 100%;
+    border-color: var(--black5);
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  }
+  
+  .userIcon {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .userIcon i {
+    color: white;
+  }
+
+  /* text */
+  .profileText {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: var(--white5);
+    font-size: 1em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .accountProfile:hover {
+    width: 100px;
+    border-radius: 40px;
+    transition-duration: .3s;
+    border-color: var(--white5);
+  }
+  
+  .accountProfile:hover .userIcon {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+    margin-right: 1em;
+  }
+
+  /* hover effect button's text */
+  .accountProfile:hover .profileText {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-left: 0.5em;
+  }
+
+  .slidesSection {
+    width: 100vw;
+    height: 20em;
+    position: relative;
+    margin-top: 4.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black3);
+    color: var(--black5);
+  }
+
+  .slidesSection p {
+    margin-left: -1em;
+  }
+
+  .slidesSection .fa-cloud {
+    font-size: 2em;
+    margin-right: 0.25em;
+    transform: translateY(-0.05em);
+  }
+
+  .slidesSection .fa-circle-exclamation {
+    transform: translateX(-2.25em);
+    color: var(--black3);
+  }
