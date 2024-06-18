@@ -19,7 +19,7 @@
                 <input type="text" required="">
                 <label for="search">search</label>
             </div>
-            <div class="accountProfile" id="navProfile">
+            <div class="accountProfile" id="navProfile" onclick="extendNav()">
                 <div class="userIcon">
                     <i class="fa-solid fa-user"></i>
                 </div>
@@ -29,12 +29,54 @@
             </div>
         </nav>
     </header>
+    <nav class="navExtend" id="navExtend" onmouseleave="retractNav()">
+        <div class="accountProfileExtended" id="navProfileExtended">
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <h3>Guest</h3>
+        <div class="divider"></div>
+        <ul>
+            <li><i class="fa-solid fa-right-to-bracket"></i> sign in</li>
+            <li><i class="fa-solid fa-sliders"></i> preferences</li>
+            <li><i class="fa-solid fa-circle-info"></i> about us</li>
+        </ul>
+    </nav>
 
     <div class="slidesSection">
-        <i class="fa-solid fa-cloud"></i>
+        <div class="sectionHeader">
+            <i class="fa-solid fa-star"></i>
+            <h3>Recommended</h3>
+        </div>
+        <div class="slideShow">
+            <div class="slidesContainer">
+                <div class="slides" id="slide1">
+                    <div class="slideOverlay"></div>
+                    <div class="slideInfo">
+                        <h4>racist master!!</h4>
+                        <span>by the gaming gamer</span>
+                    </div>
+                </div>
+                <div class="slides" id="slide2">
+                    <div class="slideOverlay"></div>
+                    <div class="slideInfo">
+                        <h4>the gamer bridge</h4>
+                        <span> by iamgroot</span>
+                    </div>
+                </div>
+                <div class="slides" id="slide3">
+                    <div class="slideOverlay"></div>
+                    <div class="slideInfo">
+                        <h4>victory is for the bold</h4>
+                        <span>by ballocks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <i class="fa-solid fa-cloud"></i>
         <i class="fa-solid fa-circle-exclamation"></i>
-        <p>ไม่พบเซิร์ฟเวอร์</p>
+        <p>ไม่พบเซิร์ฟเวอร์</p> -->
     </div>
 
+    <script src="./uwu.js"></script>
 </body>
 </html>
